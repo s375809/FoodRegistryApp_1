@@ -1,0 +1,19 @@
+# Visual Studio filer
+.vs/
+*.csproj.user
+*.suo
+
+# Byggefiler
+bin/
+obj/
+
+# Konfigurasjonsfiler
+appsettings.Development.json
+appsettings.Production.json
+
+# Loggfiler
+*.log
+
+# Midlertidige filer
+*.tmp
+*.bak
