@@ -4,13 +4,20 @@ namespace FoodRegistryApp1.Models
 {
     public class Food
     {
-        public int Id { get; set; }  // Primærnøkkel og AutoIncrement (Identity)
+        public int Id { get; set; }
 
         [Required]
-        public required string FoodName { get; set; }  // Navn på maten
+        public string FoodName { get; set; }
 
-        public int Calories { get; set; }  // Kalorier per porsjon
+        [Required]
+        public int Calories { get; set; }
 
-        public required string Category { get; set; }  // Matkategori (f.eks. Frukt, Grønnsaker, etc.)
+        public int Protein { get; set; } // Legg til proteiner
+        public int Fat { get; set; } // Legg til fett
+        public int Carbs { get; set; } // Legg til karbohydrater
+        public int Fiber { get; set; } // Legg til fiber
+        public int Sugar { get; set; } // Legg til sukker
+
+        public string Category { get; set; } // Kategorier kan være f.eks. 'Frukt', 'Grønnsaker', etc.
     }
 }

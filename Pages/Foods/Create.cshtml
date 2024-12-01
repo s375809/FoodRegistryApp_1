@@ -1,33 +1,40 @@
 ﻿@page
 @model FoodRegistryApp1.Pages.Foods.CreateModel
 
-@{
-    ViewData["Title"] = "Create Food";
-}
+<h2>Create New Food</h2>
 
-<h1>@ViewData["Title"]</h1>
-
-<h4>Food</h4>
-<hr />
 <form method="post">
     <div class="form-group">
-        <label asp-for="Food.FoodName" class="control-label"></label>
-        <input asp-for="Food.FoodName" class="form-control" />
-        <span asp-validation-for="Food.FoodName" class="text-danger"></span>
+        <label for="FoodName">Food Name</label>
+        <input type="text" class="form-control" id="FoodName" name="Food.FoodName" required />
     </div>
     <div class="form-group">
-        <label asp-for="Food.Calories" class="control-label"></label>
-        <input asp-for="Food.Calories" class="form-control" />
-        <span asp-validation-for="Food.Calories" class="text-danger"></span>
+        <label for="Calories">Calories</label>
+        <input type="number" class="form-control" id="Calories" name="Food.Calories" required />
     </div>
     <div class="form-group">
-        <label asp-for="Food.Category" class="control-label"></label>
-        <input asp-for="Food.Category" class="form-control" />
-        <span asp-validation-for="Food.Category" class="text-danger"></span>
+        <label for="Protein">Protein (g)</label>
+        <input type="number" class="form-control" id="Protein" name="Food.Protein" />
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <label for="Fat">Fat (g)</label>
+        <input type="number" class="form-control" id="Fat" name="Food.Fat" />
     </div>
+    <div class="form-group">
+        <label for="Carbs">Carbs (g)</label>
+        <input type="number" class="form-control" id="Carbs" name="Food.Carbs" />
+    </div>
+    <div class="form-group">
+        <label for="Fiber">Fiber (g)</label>
+        <input type="number" class="form-control" id="Fiber" name="Food.Fiber" />
+    </div>
+    <div class="form-group">
+        <label for="Sugar">Sugar (g)</label>
+        <input type="number" class="form-control" id="Sugar" name="Food.Sugar" />
+    </div>
+    <div class="form-group">
+        <label for="Category">Category</label>
+        <input type="text" class="form-control" id="Category" name="Food.Category" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
 </form>
-
-<a href="@Url.Page("./Index")">Back to list</a>

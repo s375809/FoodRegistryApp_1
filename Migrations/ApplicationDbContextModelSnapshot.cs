@@ -32,13 +32,28 @@ namespace FoodRegistryApp1.Migrations
                     b.Property<int>("Calories")
                         .HasColumnType("int");
 
+                    b.Property<int>("Carbs")
+                        .HasColumnType("int");
+
                     b.Property<string>("Category")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Fat")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Fiber")
+                        .HasColumnType("int");
+
                     b.Property<string>("FoodName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Protein")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sugar")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
