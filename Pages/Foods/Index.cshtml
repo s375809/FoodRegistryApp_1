@@ -1,0 +1,38 @@
+﻿@page
+@model FoodRegistryApp1.Pages.Foods.IndexModel
+
+@{
+    ViewData["Title"] = "Food List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a href="@Url.Page("./Create")">Create New Food</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Food Name</th>
+            <th>Calories</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var food in Model.Foods)
+        {
+            <tr>
+                <td>@food.FoodName</td>
+                <td>@food.Calories</td>
+                <td>@food.Category</td>
+                <td>
+                    <a href="@Url.Page("./Edit", new { id = food.Id })">Edit</a> |
+                    <a href="@Url.Page("./Details", new { id = food.Id })">Details</a> |
+                    <a href="@Url.Page("./Delete", new { id = food.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

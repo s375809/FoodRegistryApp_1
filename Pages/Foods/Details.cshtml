@@ -1,0 +1,17 @@
+﻿@page
+@model FoodRegistryApp1.Pages.Foods.DetailsModel
+
+@{
+    ViewData["Title"] = "Food Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>@Model.Food.FoodName</h4>
+    <p>Calories: @Model.Food.Calories</p>
+    <p>Category: @Model.Food.Category</p>
+</div>
+
+<a href="@Url.Page("./Index")">Back to list</a>
+
