@@ -7,7 +7,7 @@ namespace FoodRegistryApp1.Models
         public int Id { get; set; }
 
         [Required]
-        public string FoodName { get; set; }
+        public required string FoodName { get; set; }
 
         [Required]
         public int Calories { get; set; }
@@ -18,6 +18,6 @@ namespace FoodRegistryApp1.Models
         public int Fiber { get; set; } // Legg til fiber
         public int Sugar { get; set; } // Legg til sukker
 
-        public string Category { get; set; } // Kategorier kan være f.eks. 'Frukt', 'Grønnsaker', etc.
+        public required string Category { get; set; } // Kategorier kan være f.eks. 'Frukt', 'Grønnsaker', etc.
     }
 }
